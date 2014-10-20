@@ -92,7 +92,6 @@ public class MyFragment extends Fragment implements SwipeRefreshLayout.OnRefresh
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(mActivity, DividerItemDecoration.VERTICAL_LIST);
         mRecycler.addItemDecoration(itemDecoration);
         mDataBase = new DataBaseList(mActivity);
-        mDataBase.reset();
         if (isOnline() && mDataBase.getCount() == 0)
             new FetchData().execute();
         else if (mDataBase.getCount() > 0)
