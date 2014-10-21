@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.widget.Toast;
 
 import com.app.mehdichouag.hypemachine.models.TrackModel;
 
@@ -49,7 +48,6 @@ public class DataBaseList extends SQLiteOpenHelper {
                 + KEY_TIMESTAMP + " INTEGER," + KEY_LOVE + " INTEGER,"
                 + KEY_IMAGE + " BLOB," + KEY_URL + " TEXT NOT NULL," + KEY_POSTID +" INTEGER, " + KEY_DATELOVED + " INTEGER" +");";
         db.execSQL(CREATE_TABLE);
-        Toast.makeText(mContext, "testDB", Toast.LENGTH_SHORT).show();
     }
 
     @Override
